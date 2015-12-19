@@ -2,15 +2,13 @@
 
 from __future__ import division
 
-
-    
 isa = isinstance
 Symbol = str
 
 
 class Env(dict):
-  def __init__(self,parms=(), args=(), outer=None):
-    self.update(zip(parms,args))
+  def __init__(self,params=(), args=(), outer=None):
+    self.update(zip(params,args))
     self.outer = outer
     
   def find(self,var):
@@ -123,7 +121,6 @@ def repl(prompt= "lisp>>"):
       print(to_string(val))
       
       
-
 
 
 
